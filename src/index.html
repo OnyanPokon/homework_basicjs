@@ -1,12 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homework - Basic JS</title>
-    <link href="./output.css" rel="stylesheet">
-</head>
-<body>
-    <h1>hai</h1>
-</body>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="">
+      <section class="w-full bg-gray-200">
+        <div
+          class="w-full min-h-screen max-w-screen-xl mx-auto px-4 py-12 flex items-start justify-center"
+        >
+          <div
+            class="w-full max-w-lg p-6 bg-white shadow-sm border rounded-lg text-gray-500"
+          >
+            <ul class="w-full border-b-2 flex flex-wrap mb-6">
+              <li class="py-3 text-sm me-2">
+                <span
+                  href="#"
+                  id="registrasi_tab"
+                  class="p-3 font-semibold rounded-t-xl hover:bg-gray-100 bg-gray-100 text-blue-500 cursor-pointer"
+                  onclick="changeTab('registrasi')"
+                  >Registrasi</a
+                >
+              </li>
+              <li class="py-3 text-sm">
+                <span
+                  href="#"
+                  id="pendaftar_tab"
+                  class="p-3 font-semibold rounded-t-xl hover:bg-gray-100 cursor-pointer"
+                  onclick="changeTab('pendaftar')"
+                  >Pendaftar</span
+                >
+              </li>
+            </ul>
+
+            <div id="pendaftaran_content" class="hidden min-h-60">
+                <div class="flex flex-col gap-y-6">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="text-xs bg-gray-100">
+                                <th class="p-2 border font-semibold">No</th>
+                                <th class="p-2 border font-semibold">Nama</th>
+                                <th class="p-2 border font-semibold">Umur</th>
+                                <th class="p-2 border font-semibold">Uang Sangu</th>
+                            </tr>
+                        </thead>
+                       <tbody>
+
+                       </tbody>
+                        <!-- <tr class="text-xs">
+                            <td class="p-2 border text-center">1</td>
+                            <td class="p-2 border text-center">Mohamad Rafiq</td>
+                            <td class="p-2 border text-center">17th</td>
+                            <td class="p-2 border text-center">1000000</td>
+                        </tr> -->
+                    </table>
+                    <div class="p-4 rounded-lg border border-blue-500 bg-blue-100 text-blue-500 font-semibold flex items-center justify-between text-xs">
+                        <div>
+                            Uang Sangu AVG : <span id="uang_sangu_avg"></span>
+                        </div>
+                        <div>
+                            Umur AVG : <span id="umur_avg"></span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="registrasi_content" class="px-2 flex flex-col gap-y-4 min-h-60">
+              <h2 class="text-lg font-semibold">Form Registrasi</h2>
+              <form action="" class="flex flex-col gap-y-4">
+                <div class="flex flex-col gap-y-1">
+                  <label for="nama" class=" ms-1 text-sm font-medium">nama</label>
+                  <input required minlength="10" type="text" id="nama" placeholder="Masukan Nama Kamu" class="p-2.5 text-sm bg-gray-50 border rounded-md" />
+                </div>
+                <div class="flex flex-col gap-y-1">
+                  <label for="umur" class=" ms-1 text-sm font-medium">Umur</label>
+                  <input required type="number" min="25" max="100" id="umur" placeholder="Masukan Umur Kamu" class="p-2.5 text-sm bg-gray-50 border rounded-md" />
+                </div>
+                <div class="flex flex-col gap-y-1">
+                  <label for="uangSangu" class=" ms-1 text-sm font-medium">Uang Sangu</label>
+                  <input required type="number" min="100000" max="1000000" id="uangSangu" placeholder="Masukan Umur Kamu" class="p-2.5 text-sm bg-gray-50 border rounded-md" />
+                </div>
+                <div class="w-full  mb-5">
+                    <button type="submit" class="p-2 px-8 rounded-md hover:bg-blue-400 text-sm bg-blue-500 text-white">
+                        Kirim
+                    </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="index.js"></script>
 </html>
